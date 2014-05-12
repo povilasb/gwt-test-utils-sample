@@ -131,9 +131,8 @@
 			fork="no" >
 
 			<classpath>
-				<pathelement location="${src.build.dir}" />
-				<pathelement location="${test.build.dir}" />
 				<path refid="project.class.path" />
+				<pathelement location="${test.build.dir}" />
 			</classpath>
 
 			<formatter type="brief" usefile="false" />
