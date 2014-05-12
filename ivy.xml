@@ -1,0 +1,33 @@
+<ivy-module version="2.2">
+	<info organisation="com.example.gwtTestUtils" module="HelloWorld"/>
+
+	<configurations>
+		<conf name="debug" description="Needed to run in debug mode." />
+		<conf name="compile" description="Needed for compilation
+			(other GWT libraries)." />
+	</configurations>
+
+	<dependencies>
+		<dependency org="com.google.gwt" name="gwt-user" rev="2.6.0"
+			conf="compile->default"/>
+		<dependency org="com.google.gwt" name="gwt-dev" rev="2.6.0"
+			conf="compile->default"/>
+
+
+		<!-- development -->
+		<dependency org="com.google.gwt" name="gwt-servlet" rev="2.6.0"
+			conf="debug->default"/>
+		<dependency org="com.google.gwt" name="gwt-codeserver"
+			rev="2.6.0" conf="debug->default"/>
+
+		<dependency org="junit" name="junit" rev="4.11"
+			conf="debug->default" />
+
+		<dependency org="org.apache.ant" name="ant-junit" rev="1.8.2"
+			conf="debug->default"/>
+
+		<dependency org="com.googlecode.gwt-test-utils"
+			name="gwt-test-utils" rev="0.47"
+			conf="debug->default" />
+	</dependencies>
+</ivy-module>
