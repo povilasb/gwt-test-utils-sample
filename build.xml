@@ -133,6 +133,7 @@
 			<classpath>
 				<path refid="project.class.path" />
 				<pathelement location="${test.build.dir}" />
+				<pathelement location="${src.dir}" />
 			</classpath>
 
 			<formatter type="brief" usefile="false" />
