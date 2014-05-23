@@ -4,6 +4,7 @@
 	default="build" basedir=".">
 
 	<property name="build.dir" value="build" />
+	<property name="gwt.cache.dir" value="${build.dir}" />
 
 	<property name="test.src.dir" value="test" />
 	<property name="test.build.dir" value="${build.dir}/classes/test" />
@@ -55,16 +56,12 @@
 	<target name="gwtc" depends="javac"
 		description="GWT compiles class files to JavaScript">
 
-		<mkdir dir="${build.dir}/gwt-unitCache/"/>
-
-		<property name="gwt-cache-location"
-			location="${build.dir}/gwt-unitCache/"/>
-
+		<mkdir dir="${gwt.cache.dir}" />
 		<java failonerror="true" fork="true"
 			classname="com.google.gwt.dev.Compiler">
 
 			<sysproperty key="gwt.persistentunitcachedir"
-				value="${gwt-cache-location}"/>
+				value="${gwt.cache.dir}" />
 
 			<classpath>
 				<pathelement location="${src.dir}" />
@@ -129,6 +126,8 @@
 
 		<junit haltonfailure="false" includeantruntime="false"
 			fork="yes" forkmode="once" >
+			<sysproperty key="gwt.persistentunitcachedir"
+				value="${gwt.cache.dir}" />
 
 			<classpath>
 				<path refid="project.class.path" />
