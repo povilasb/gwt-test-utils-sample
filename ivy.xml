@@ -12,6 +12,8 @@
 			conf="compile->default"/>
 		<dependency org="com.google.gwt" name="gwt-dev" rev="2.6.0"
 			conf="compile->default"/>
+		<dependency org="javax.validation" name="validation-api"
+			rev="1.0.0.GA" />
 
 		<!-- development -->
 		<dependency org="junit" name="junit" rev="4.11"
