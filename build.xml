@@ -128,7 +128,7 @@
 		description="Run tests.">
 
 		<junit haltonfailure="false" includeantruntime="false"
-			fork="no" >
+			fork="yes" forkmode="once" >
 
 			<classpath>
 				<path refid="project.class.path" />
