@@ -72,9 +72,7 @@
 			<jvmarg value="-Xmx256M"/>
 			<arg line="${gwt.args.release}"/>
 			<arg value="com.example.gwtTestUtils.Main"/>
-
 		</java>
-
 	</target>
 
 
@@ -87,7 +85,7 @@
 		<delete dir="${build.dir}" failonerror="false" />
 		<delete dir="war/Main" failonerror="false" />
 		<delete dir="war/WEB-INF" failonerror="false" />
-	 </target>
+	</target>
 
 
 	<!-- Test targets. -->
